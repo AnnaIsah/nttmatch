@@ -1,4 +1,4 @@
-import { getAuth, GoogleAuthProvider, signInWithPopup, setPersistence, browserSessionPersistence} from  "./../../settings/firebaseAuth";
+import { getAuth, GoogleAuthProvider, signInWithPopup, setPersistence, browserSessionPersistence} from  "../../Service/firebaseAuth";
 
 const auth = getAuth();
 
