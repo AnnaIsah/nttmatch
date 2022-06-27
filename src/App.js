@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from "../src/Pages/Login/index.jsx";
 import Register from "../src/Pages/Register/index.jsx";
 import Home from "../src/Pages/Home/index.jsx";
-import  PrivateRoute from "../src/Service/privateroute.js"
+import  PrivateRoute from "./Routes/privateroute.js"
 
 function App() {
   return (
