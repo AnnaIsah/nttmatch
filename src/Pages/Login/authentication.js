@@ -1,11 +1,13 @@
-import { getAuth, GoogleAuthProvider, signInWithPopup, setPersistence, browserSessionPersistence} from  "../../Service/firebaseAuth";
+import * as firebase from "firebase/app";
+import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 
-const auth = getAuth();
+import firebaseConfig from "../../Service/firebaseSettings.js";
 
-export function logarGmail() {
-  return setPersistence(auth, browserSessionPersistence)
-    .then(() => {
-      const provider = new GoogleAuthProvider();
-      return signInWithPopup(auth, provider);
-    });
+const provider = new GoogleAuthProvider();
+export const authentication = getAuth();
+
+export async function signInGoogle() {
+  const result = await signInWithPopup(authentication, provider);
+  const credential = GoogleAuthProvider.credentialFromResult(result);
+  return credential;
 }

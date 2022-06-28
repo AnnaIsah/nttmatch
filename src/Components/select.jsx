@@ -1,6 +1,6 @@
 import React from "react";
 
-const Select = (onChange, className) => (
+const Select = ({onChange, className}) => (
     <select 
     onChange={onChange}
     className={className}
