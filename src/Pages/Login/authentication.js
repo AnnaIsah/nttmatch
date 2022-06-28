@@ -1,7 +1,8 @@
+/* eslint-disable no-unused-vars */
 import * as firebase from "firebase/app";
 import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 
-import firebaseConfig from "../../Service/firebaseSettings.js";
+import firebaseSettings from "../../Service/firebaseSettings.js";
 
 const provider = new GoogleAuthProvider();
 export const authentication = getAuth();

@@ -2,13 +2,15 @@ import { useNavigate } from 'react-router';
 import { FcGoogle } from "react-icons/fc";
 import Button from '../../Components/button.jsx'
 import { signInGoogle } from "./authentication.js"
+import { setToken } from "../../Service/token.js"
 
 function Login() {
   const navigate = useNavigate()
   const logOn = async (e) => {
     e.preventDefault();
     signInGoogle()
-      .then(() => {
+      .then((data) => {
+        setToken(data.token)
         navigate("/feed");
         console.log("entrou")
       })
@@ -28,7 +30,7 @@ function Login() {
       </main>
     </>
 
-  )
+  );
 
 }
-export default Login
+export default Login;
