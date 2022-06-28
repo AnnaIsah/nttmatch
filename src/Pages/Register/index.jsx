@@ -7,7 +7,7 @@ import Button from "../../Components/button"
 
 
 function Register() {
-  return(
+  return (
     <form>
       <h1>NTT MATCH</h1>
       <div>
@@ -16,29 +16,33 @@ function Register() {
       </div>
       <div>
         <label>Gênero</label>
-        <Select/>
+        <Select />
       </div>
       <div>
         <label>Idade</label>
-        <Input type="number" placeholder="00" min="0" max="100" name="inpIdade"  />
+        <Input type="number" pattern="[0-9]{2}"
+          title="A idade deve seguir o padrão exigido" placeholder="00" min="0" max="100" name="inpIdade" />
       </div>
       <div>
         <label>E-mail</label>
-        <Input type="email" placeholder="Insira o e-mail" name="inpEmail" />
+        <Input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+          title="Siga este formato exemplo@exemplo.com" placeholder="Insira o e-mail" name="inpEmail" />
       </div>
       <div>
         <label>Telefone</label>
-        <Input type="number" placeholder="(00) 00000-0000" min="0" max="9" name="inpIdade"  />
+        <Input type="number" pattern="\+\d{2}\s\(\d{2}\)\s\d{4,5}-?\d{4}"
+          title="O telefone deve seguir o padrão exigido" placeholder="(00) 00000-0000" min="0" max="9" name="inpIdade" />
       </div>
       <div>
         <label>CEP</label>
-        <Input type="text" placeholder="00000-000" name="inpCep" />
+        <Input type="text" pattern="/^([\d]{2})\.?([\d]{3})\-?([\d]{3})/"
+          title="O CEP deve ter 8 caracteres" placeholder="00000-000" name="inpCep" />
       </div>
 
       <h2>Interesses</h2>
-      <Radio type="radio" value="front" name="technology" label="Front"/>
-      <Radio type="radio" value="back" name="technology" label="Back"/>
-      <Radio type="radio" value="full" name="technology" label="Full Stack"/>
+      <Radio type="radio" value="front" name="technology" label="Front" />
+      <Radio type="radio" value="back" name="technology" label="Back" />
+      <Radio type="radio" value="full" name="technology" label="Full Stack" />
 
       <label>Música</label>
       <div>
@@ -72,9 +76,9 @@ function Register() {
       <div>
         <Checkbox label="Praia"></Checkbox>
         <Checkbox label="Montanha"></Checkbox>
-      </div> 
+      </div>
       <Button className="Salvar" title="Salvar">Salvar</Button>
-      </form>
+    </form>
   )
 }
 export default Register
