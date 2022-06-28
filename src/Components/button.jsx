@@ -1,9 +1,16 @@
 import React from "react";
 import { Button } from 'reactstrap';
 
-function ButtonR ({type, className, title, onClick, children}) {
+function ButtonR({ className, title, onClick, type, children }) {
     return (
-    <Button color="primary" type="submit" className={className} onClick={onClick} children={children}>{title}</Button>
+        <button
+            type={type}
+            className={className}
+            onClick={onClick}
+            title={title}
+            children={children}>
+
+        </button>
     );
 }
 
