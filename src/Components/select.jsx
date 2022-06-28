@@ -7,6 +7,7 @@ function Select ({onChange, className}) {
     onChange={onChange}
     className={className}
     name="gender">
+        <option value="">-</option>
         <option value="female">Feminino</option>
         <option value="male">Masculino</option>
         <option value="noGender">Agênero</option>
