@@ -1,9 +1,10 @@
 import React from "react";
+import { Button } from 'reactstrap';
 
-function Button ({className, title, onClick}) {
+function ButtonR ({className, title, onClick}) {
     return (
-    <button type="submit" className={className} onClick={onClick}>{title}</button>
+    <Button color="primary" type="submit" className={className} onClick={onClick}>{title}</Button>
     );
 }
 
-export default Button;
+export default ButtonR;
