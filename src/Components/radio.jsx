@@ -1,13 +1,11 @@
 import React from "react";
 
-const Radio = ({className, type, name, onChange, value}) => (
-    <input 
-    type={type} 
-    value={value} 
-    name={name} 
-    onChange={onChange} 
-    className={className}
-    required/>
-);
+function Radio ({type,className, name, onChange, value, label}) {
+    return(
+    <label>
+        <input type={type} value={value} name={name} onChange={onChange} className={className} required/>{label}
+    </label>
+    );
+}
 
 export default Radio;
