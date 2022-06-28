@@ -1,7 +1,7 @@
 import React from "react";
 import { Button } from 'reactstrap';
 
-function ButtonR({ className, title, onClick, children, type }) {
+function ButtonR({ className, title, onClick, type, children }) {
     return (
         <button
             type={type}
@@ -10,7 +10,6 @@ function ButtonR({ className, title, onClick, children, type }) {
             title={title}
             children={children}>
         </button>
-
     );
 }
 
