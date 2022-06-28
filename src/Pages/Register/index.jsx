@@ -3,6 +3,7 @@ import Select from "../../Components/select"
 import Radio from "../../Components/radio"
 import Checkbox from "../../Components/checkbox"
 import Button from "../../Components/button"
+
 import { useEffect, useState } from "react"
 
 function Register() {
@@ -20,6 +21,13 @@ function Register() {
   const [animals, setAnimals] = useState("")
   const [travel, setTravel] = useState("")
   const selectGender = [
+     {
+      value: "Selecione",
+      text: "Selecione",
+      selected: true,
+      disabled: true
+    },
+
     {
       value: "famale",
       text: "Feminino",
@@ -75,9 +83,7 @@ function Register() {
         <label>Nome completo</label>
         <Input type="text" placeholder="Insira o nome" name="name" value={name} max="225"
         onChange={(e)=>{setName(console.log(e.target.value))}}/>
-      </div>
-      <div>
-        <label>Gênero</label>
+
         <Select options={selectGender}
         onChange={(e) => {setGender(console.log((e.target.value)))}}/>
       </div>
@@ -109,10 +115,11 @@ function Register() {
       </div>
 
       <h2>Interesses</h2>
-      <Radio type="radio" value="front" name="technology" label="Front" />
-      <Radio type="radio" value="back" name="technology" label="Back" />
-      <Radio type="radio" value="full" name="technology" label="Full Stack" />
-
+      <div className="cow">
+      <Radio type="radio" value="front" name="technology" label="Front"/>
+      <Radio type="radio" value="back" name="technology" label="Back"/>
+      <Radio type="radio" value="full" name="technology" label="Full Stack"/>
+      </div>
       <label>Música</label>
       <div>
         <Checkbox name ="music" value ="axé" label="Axé"></Checkbox>
@@ -147,7 +154,8 @@ function Register() {
         <Checkbox name="travel" value="montain" label="Montanha"></Checkbox>
       </div>
       <Button className="Salvar" title="Salvar" type="submit">Salvar</Button>
-    </form>
+    </form>  
+      
   )
 }
 export default Register
