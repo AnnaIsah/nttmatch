@@ -1,5 +1,6 @@
 import React from "react";
 
+
 function Input ({className,type ,placeholder ,name , max, min, onChange,  pattern, title}) {
     return (
     <input

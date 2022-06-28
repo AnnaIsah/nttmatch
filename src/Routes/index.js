@@ -1,7 +1,7 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Login from "../Pages/Login/index.jsx";
 import Register from "../Pages/Register/index.jsx";
-import Home from "../Pages/Home/index.jsx";
+import Feed from "../Pages/Feed/index.jsx";
 import PrivateRoute from "./privateroute.js";
 
 function journey() {
@@ -9,6 +9,7 @@ function journey() {
     <BrowserRouter>
       <Routes>
         <Route path="/login" element={<Login />} />
+        <Route path="/" element={<Navigate replace to="/login" />} />
         <Route
           path="/register"
           element={
@@ -19,11 +20,11 @@ function journey() {
         />
         <Route
           exact
-          path="home"
+          path="/feed"
           element={
-            <PrivateRoute redirectTo="/login">
-              <Home />
-            </PrivateRoute>
+            // <PrivateRoute redirectTo="/login">
+            <Feed />
+            // </PrivateRoute>
           }
         />
       </Routes>

@@ -1,9 +1,18 @@
 import React from "react";
 
-function Button ({className, title, onClick}) {
+
+function Button({ className, title, onClick, children }) {
     return (
-    <button type="submit" className={className} onClick={onClick}>{title}</button>
+        <button
+            type="subtmit"
+            className={className}
+            onClick={onClick}
+            title={title}
+            children={children}>
+
+        </button>
     );
+
 }
 
 export default Button;

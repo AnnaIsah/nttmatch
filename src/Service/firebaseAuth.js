@@ -5,4 +5,4 @@ export {
   setPersistence,
   browserSessionPersistence,
   sendPasswordResetEmail,
-} from "https://www.gstatic.com/firebasejs/9.6.7/firebase-app.js";
+} from "https://www.gstatic.com/firebasejs/9.8.4/firebase-app.js";
