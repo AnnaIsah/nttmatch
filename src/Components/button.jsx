@@ -1,12 +1,9 @@
 import React from "react";
 
-const Button = (className, title, onClick) => (
-    <button
-    type="subtmit"
-    className={className}
-    onClick={onClick}
-    title={title}>
-    </button>
-);
+function Button ({className, title, onClick}) {
+    return (
+    <button type="submit" className={className} onClick={onClick}>{title}</button>
+    );
+}
 
 export default Button;

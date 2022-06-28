@@ -1,6 +1,7 @@
 import React from "react";
 
-const Select = (onChange, className) => (
+function Select ({onChange, className}) {
+    return (
     <select 
     onChange={onChange}
     className={className}
@@ -11,6 +12,7 @@ const Select = (onChange, className) => (
         <option value="fluidGender">Gênero Fluido</option>
         <option value="notDefined">Prefiro não definir</option>
     </select>
-);
+    );
+}
 
 export default Select;

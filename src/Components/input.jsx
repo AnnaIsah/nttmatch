@@ -1,6 +1,7 @@
 import React from "react";
 
-const Input = (className,type ,placeholder ,name , max, min, onChange) => (
+function Input ({className,type ,placeholder ,name , max, min, onChange}) {
+    return (
     <input
     className={className}
     type={type}
@@ -10,6 +11,7 @@ const Input = (className,type ,placeholder ,name , max, min, onChange) => (
     min={min}
     onChange={onChange}
     />
-);
+    );
+}
 
 export default Input;
