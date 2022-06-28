@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router';
 import { FcGoogle } from "react-icons/fc";
 import Button from '../../Components/button.jsx'
-import { signInGoogle } from "./authentication.js"
+import { signInGoogle } from "../../Service/authentication.js"
 import { setToken } from "../../Service/token.js"
 
 function Login() {
