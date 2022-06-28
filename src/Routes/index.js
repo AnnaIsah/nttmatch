@@ -22,9 +22,9 @@ function journey() {
           exact
           path="/feed"
           element={
-            <PrivateRoute redirectTo="/login">
-              <Feed />
-            </PrivateRoute>
+            // <PrivateRoute redirectTo="/login">
+            <Feed />
+            // </PrivateRoute>
           }
         />
       </Routes>

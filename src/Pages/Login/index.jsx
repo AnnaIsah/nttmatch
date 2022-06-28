@@ -1,14 +1,16 @@
-import Button from '../../Components/button.jsx'
-import { Navigate } from 'react-router';
+import { useNavigate } from 'react-router';
 import { FcGoogle } from "react-icons/fc";
+import Button from '../../Components/button.jsx'
 import { signInGoogle } from "./authentication.js"
 
 function Login() {
+  const navigate = useNavigate()
   const logOn = async (e) => {
     e.preventDefault();
     signInGoogle()
       .then(() => {
-        Navigate("feed");
+        navigate("/feed");
+        console.log("entrou")
       })
       .catch((error) => {
         console.log(error)
