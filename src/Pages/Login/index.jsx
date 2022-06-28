@@ -5,15 +5,15 @@ import { signInGoogle } from "./authentication.js"
 
 function Login() {
   const logOn = async (e) => {
-  e.preventDefault();
-  signInGoogle()
-  .then(() => {
-      Navigate("/feed");
-  })
-  .catch((error) => {
-      console.log(error)
-  })       
-}
+    e.preventDefault();
+    signInGoogle()
+      .then(() => {
+        Navigate("feed");
+      })
+      .catch((error) => {
+        console.log(error)
+      })
+  }
 
   return (
     <>

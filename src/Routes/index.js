@@ -20,7 +20,7 @@ function journey() {
         />
         <Route
           exact
-          path="Feed"
+          path="/feed"
           element={
             <PrivateRoute redirectTo="/login">
               <Feed />
