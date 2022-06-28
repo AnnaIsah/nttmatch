@@ -69,9 +69,6 @@ function Register() {
     .then(res => setUser(res.data))
   },[]);
 
-
-
-
   function handleSubmit(e){
     e.preventDefault();
   }
@@ -83,7 +80,9 @@ function Register() {
         <label>Nome completo</label>
         <Input type="text" placeholder="Insira o nome" name="name" value={name} max="225"
         onChange={(e)=>{setName(console.log(e.target.value))}}/>
-
+      </div>
+      <div>
+        <label>Gênero</label>
         <Select options={selectGender}
         onChange={(e) => {setGender(console.log((e.target.value)))}}/>
       </div>
