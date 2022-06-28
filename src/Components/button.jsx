@@ -9,7 +9,6 @@ function ButtonR({ className, title, onClick, type, children }) {
             onClick={onClick}
             title={title}
             children={children}>
-
         </button>
     );
 }

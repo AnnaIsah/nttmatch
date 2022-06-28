@@ -3,7 +3,7 @@ import Select from "../../Components/select"
 import Radio from "../../Components/radio"
 import Checkbox from "../../Components/checkbox"
 import Button from "../../Components/button"
-
+import { addUsers } from "../../Service/authentication.js"
 import { useEffect, useState } from "react"
 
 function Register() {
@@ -155,7 +155,6 @@ function Register() {
       </div>
       <Button className="Salvar" title="Salvar" type="submit">Salvar</Button>
     </form>  
-      
   )
 }
 export default Register
