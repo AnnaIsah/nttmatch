@@ -37,7 +37,6 @@ O intuito da aplicação é poder aproximar os colaboradores, já que o trabalho
 
 ## 4. Ferramentas utilizadas
 
- ### 🛠 Prototyping and organizational tools:
 <div>
   <br>
   <img align="center"  alt="Canva" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/canva/canva-original.svg">	
@@ -52,4 +51,42 @@ O intuito da aplicação é poder aproximar os colaboradores, já que o trabalho
   <img align="center"  alt="HTML" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg">
   <img align="center"  alt="CSS" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg">  
 </div>    
+
+## 5. Desenvolvedoras
+
+***
+<h3 >Anna Ferraz</h3>   
+<img src="https://github.com/AnnaIsah.png" alt="Anna" width="100">
+
+<a href="https://github.com/AnnaIsah" target="_blank">GitHub</a>
+<a href="https://www.linkedin.com/in/anna-ferraz/" target="_blank">LinkedIn</a></p>
+
+***
+<h3 >Daianne Gonçalvez</h3>   
+<img src="https://github.com/daianeex.png" alt="Anna" width="100">
+
+<a href="https://github.com/daianeex" target="_blank">GitHub</a>
+<a href="https://www.linkedin.com/in/daianegoncalves/" target="_blank">LinkedIn</a></p>
+
+***
+<h3 >Isabela Soares</h3>   
+<img src="https://github.com/IsaSoaresFr.png" alt="Anna" width="100">
+
+<a href="https://github.com/IsaSoaresFr" target="_blank">GitHub</a>
+<a href="https://www.linkedin.com/in/isasoaresfr/" target="_blank">LinkedIn</a></p>
+
+***
+<h3 >Maria Luiza</h3>   
+<img src="https://github.com/MariaLuizaSantana.png" alt="Anna" width="100">
+
+<a href="https://github.com/MariaLuizaSantana" target="_blank">GitHub</a>
+<a href="https://www.linkedin.com/in/maria-luiza-costaa/" target="_blank">LinkedIn</a></p>
+
+***
+<h3 >Marionne Pereira</h3>   
+<img src="https://github.com/Marione-Tainara.png" alt="Anna" width="100">
+
+<a href="https://github.com/Marione-Tainara" target="_blank">GitHub</a>
+<a href="https://www.linkedin.com/in/marione-tainara-da-sp/" target="_blank">LinkedIn</a></p>
+
 
