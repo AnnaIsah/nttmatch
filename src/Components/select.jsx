@@ -1,22 +1,19 @@
 import React from "react";
 
-function Select(props) {
-
-    const options = props.options || [];
+function Select ({onChange, className, name}) {
     return (
-    <>
-        <select name={props.name} onChange={props.onChange}>
-        {
-            options.map((item, index) => {
-            return <option ket={index} 
-            value={item.value} 
-            selected={item.selected} 
-            disabled={item.disabled}>{item.text}</option>
-            })
-        }
-        </select>
-    </>
 
+    <select 
+    onChange={onChange}
+    className={className}
+    name={name}>
+        <option value=""></option>
+        <option value="female">Feminino</option>
+        <option value="male">Masculino</option>
+        <option value="noGender">Agênero</option>
+        <option value="fluidGender">Gênero Fluido</option>
+        <option value="notDefined">Prefiro não definir</option>
+    </select>
     );
 }
 

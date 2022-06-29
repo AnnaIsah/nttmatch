@@ -1,5 +1,5 @@
 import React from "react";
-import { Button } from 'reactstrap';
+//import { Button } from 'reactstrap';
 
 function ButtonR({ className, title, onClick, type, children }) {
     return (

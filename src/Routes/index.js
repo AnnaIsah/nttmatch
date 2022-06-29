@@ -13,18 +13,18 @@ function journey() {
         <Route
           path="/register"
           element={
-            <PrivateRoute redirectTo="/login">
+            //<PrivateRoute redirectTo="/login">
               <Register />
-            </PrivateRoute>
+            //</PrivateRoute>
           }
         />
         <Route
           exact
           path="/feed"
           element={
-            <PrivateRoute redirectTo="/login">
+            // <PrivateRoute redirectTo="/login">
               <Feed />
-            </PrivateRoute>
+            //</PrivateRoute>
           }
         />
       </Routes>

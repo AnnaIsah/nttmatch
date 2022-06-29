@@ -3,26 +3,29 @@ import Select from "../../Components/select"
 import Radio from "../../Components/radio"
 import Checkbox from "../../Components/checkbox"
 import Button from "../../Components/button"
-import { addUsers } from "../../Service/authentication.js"
+import {ViaCep} from "../../Service/api"
+// import { addUsers } from "../../Service/authentication.js"
 import { useEffect, useState } from "react"
 
 function Register() {
   
-  const [user, setUser] = useState([])
-  const [name, setName] = useState("")
-  const [gender, setGender] = useState("")
-  const [age, setAge] = useState("")
-  const [email, setEmail] = useState("")
-  const [tel, setTel] = useState("")
-  const [cep, setCep] = useState("")
-  const [music, setMusic] = useState("")
-  const [sport, setSport] = useState("")
-  const [game, setGame] = useState("")
-  const [animals, setAnimals] = useState("")
-  const [travel, setTravel] = useState("")
+  const [user, setUser] = useState([]);
+  const [name, setName] = useState("");
+  const [gender, setGender] = useState("");
+  const [age, setAge] = useState("");
+  const [email, setEmail] = useState("");
+  const [tel, setTel] = useState("");
+  const [cep, setCep] = useState("");
+  const [music, setMusic] = useState("");
+  const [sport, setSport] = useState("");
+  const [game, setGame] = useState("");
+  const [animals, setAnimals] = useState("");
+  const [travel, setTravel] = useState("");
+  const [technology, setTechnology] = useState("");
+
   const selectGender = [
-     {
-      value: "Selecione",
+    {
+      value: "Select",
       text: "Selecione",
       selected: true,
       disabled: true
@@ -59,21 +62,19 @@ function Register() {
       disabled: false
     }
   ];
-
-  useEffect(()=>{
-    fetch("viacep.com.br/ws/01001000/json/",{
-      headers: {
-        Accept: "application/json"
-      }
-    }).then(res => res.json())
-    .then(res => setUser(res.data))
-  },[]);
-
-
-
-
-  function handleSubmit(e){
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    try{
+      const contentApiCep = await ViaCep(cep);
+      const contentApiJson = await contentApiCep.json();
+      console.log(contentApiJson);
+    }catch(e) {
+      alert("erro desconhecido")
+    }
+    if(name===""||age===""||email===""||tel===""||cep===""||technology==="" &&
+    music==="" && sport==="" && game==="" && animals==="" && travel===""){
+      return 
+    }
   }
 
   return (
@@ -82,78 +83,98 @@ function Register() {
       <div>
         <label>Nome completo</label>
         <Input type="text" placeholder="Insira o nome" name="name" value={name} max="225"
-        onChange={(e)=>{setName(console.log(e.target.value))}}/>
-
-        <Select options={selectGender}
-        onChange={(e) => {setGender(console.log((e.target.value)))}}/>
+        onChange={(e)=>{setName(e.target.value)}}/>
+        <Select name={gender} options={selectGender}
+        onChange={(e) => {setGender(console.log(e.target.value))}}/>
       </div>
       <div>
         <label>Idade</label>
-        <Input type="text" pattern="[0-9]{2}"
+        <Input type="text"
           title="A idade deve seguir o padrão exigido" 
           placeholder="00" maxlength="100" name="age" value={age} 
-          onChange={(e)=>{setAge(console.log(e.target.value))}}/>
+          onChange={(e)=>{setAge(e.target.value)}}/>
       </div>
       <div>
         <label>E-mail</label>
-        <Input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+        <Input type="email" 
           title="Siga este formato exemplo@exemplo.com" placeholder="Insira o e-mail" name="email" value="email"
-          onChange={(e)=>{setEmail(console.log(e.target.value))}}/>
+          onChange={(e)=>{setEmail(e.target.value)}}/>
       </div>
       <div>
         <label>Telefone</label>
-        <Input type="text" pattern="\+\d{2}\s\(\d{2}\)\s\d{4,5}-?\d{4}"
+        <Input type="text" 
           title="O telefone deve seguir o padrão exigido" placeholder="(00) 00000-0000"
           min="0" max="9" name="tel" value="tel" 
-          onChange={(e)=>{setTel(console.log(e.target.value))}}/>
+          onChange={(e)=>{setTel(e.target.value)}}/>
       </div>
       <div>
         <label>CEP</label>
-        <Input type="text" pattern="/^([\d]{2})\.?([\d]{3})\-?([\d]{3})/"
-          title="O CEP deve ter 8 caracteres" placeholder="00000-000" name="cep" value="cep"
-          onChange={(e)=>{setCep(console.log(e.target.value))}}/>
+        <Input type="text"
+          title="O CEP deve ter 8 caracteres" placeholder="00000-000" name={cep} value="cep"
+          onChange={(e)=>{setCep(e.target.value)}}/>
       </div>
 
       <h2>Interesses</h2>
       <div className="cow">
-      <Radio type="radio" value="front" name="technology" label="Front"/>
-      <Radio type="radio" value="back" name="technology" label="Back"/>
-      <Radio type="radio" value="full" name="technology" label="Full Stack"/>
+      <Radio type="radio" value="front" name={technology}
+      label="Front" onChange={(e)=>{setTechnology(e.target.value)}}/>
+      <Radio type="radio" value="back" name={technology}
+      label="Back" onChange={(e)=>{setTechnology(e.target.value)}}/>
+      <Radio type="radio" value="full" name={technology}
+      label="Full Stack" onChange={(e)=>{setTechnology(e.target.value)}}/>
       </div>
       <label>Música</label>
       <div>
-        <Checkbox name ="music" value ="axé" label="Axé"></Checkbox>
-        <Checkbox name ="music" value ="blues" label="Blues"></Checkbox>
-        <Checkbox name ="music" value ="country" label="Country"></Checkbox>
-        <Checkbox name ="music" value ="forró" label="Forró"></Checkbox>
+        <Checkbox name ={music} value ="axé" label="Axé"
+          onChange={(e) =>{setMusic(e.target.value)}}></Checkbox>
+        <Checkbox name ={music} value ="blues" label="Blues"
+        onChange={(e) =>{setMusic(e.target.value)}}></Checkbox>
+        <Checkbox name ={music} value ="country" label="Country"
+        onChange={(e) =>{setMusic(e.target.value)}}></Checkbox>
+        <Checkbox name ={music} value ="forró" label="Forró"
+        onChange={(e) =>{setMusic(e.target.value)}}></Checkbox>
       </div>
       <label>Esporte</label>
       <div>
-        <Checkbox name ="sport" value ="futebol" label="Futebol"></Checkbox>
-        <Checkbox name ="sport" value ="basquete" label="Basquete"></Checkbox>
-        <Checkbox name ="sport" value ="surfe" label="Surfe"></Checkbox>
-        <Checkbox name ="sport" value ="volei" label="Vôlei"></Checkbox>
+        <Checkbox name ={sport} value ="futebol" label="Futebol"
+        onChange={(e) =>{setSport(e.target.value)}}></Checkbox>
+        <Checkbox name ={sport} value ="basquete" label="Basquete"
+        onChange={(e) =>{setSport(e.target.value)}}></Checkbox>
+        <Checkbox name ={sport} value ="surfe" label="Surfe"
+        onChange={(e) =>{setSport(e.target.value)}}></Checkbox>
+        <Checkbox name ={sport} value ="volei" label="Vôlei"
+        onChange={(e) =>{setSport(e.target.value)}}></Checkbox>
       </div>
       <label>Games</label>
       <div>
-        <Checkbox name ="game" value ="superMario" label="Super Mario"></Checkbox>
-        <Checkbox name ="game" value ="minecraft" label="Minecraft"></Checkbox>
-        <Checkbox name ="game" value ="leagueOfLegends" label="League of Legends"></Checkbox>
-        <Checkbox name ="game" value ="worldOfWarcraft" label="World of Warcraft"></Checkbox>
+        <Checkbox name ={game} value ="superMario" label="Super Mario"
+        onChange={(e) =>{setGame(e.target.value)}}></Checkbox>
+        <Checkbox name ={game} value ="minecraft" label="Minecraft"
+        onChange={(e) =>{setGame(e.target.value)}}></Checkbox>
+        <Checkbox name ={game} value ="leagueOfLegends" label="League of Legends"
+        onChange={(e) =>{setGame(e.target.value)}}></Checkbox>
+        <Checkbox name ={game} value ="worldOfWarcraft" label="World of Warcraft"
+        onChange={(e) =>{setGame(e.target.value)}}></Checkbox>
       </div>
       <label>Animais de estimação</label>
       <div>
-        <Checkbox name ="animals" value="dog" label="Cachorro"></Checkbox>
-        <Checkbox name ="animals" value="cat" label="Gato"></Checkbox>
-        <Checkbox name ="animals" value="rabit" label="Coelho"></Checkbox>
-        <Checkbox name ="animals" value="hamster" label="Hamster"></Checkbox>
+        <Checkbox name ={animals} value="dog" label="Cachorro"
+        onChange={(e) =>{setAnimals(e.target.value)}}></Checkbox>
+        <Checkbox name ={animals} value="cat" label="Gato"
+        onChange={(e) =>{setAnimals(e.target.value)}}></Checkbox>
+        <Checkbox name ={animals} value="rabit" label="Coelho"
+        onChange={(e) =>{setAnimals(e.target.value)}}></Checkbox>
+        <Checkbox name ={animals} value="hamster" label="Hamster"
+        onChange={(e) =>{setAnimals(e.target.value)}}></Checkbox>
       </div>
       <label>Viagens</label>
       <div>
-        <Checkbox name="travel" value="beach" label="Praia"></Checkbox>
-        <Checkbox name="travel" value="montain" label="Montanha"></Checkbox>
+        <Checkbox name={travel} value="beach" label="Praia"
+        onChange={(e) =>{setTravel(e.target.value)}}></Checkbox>
+        <Checkbox name={travel} value="montain" label="Montanha"
+        onChange={(e) =>{setTravel(e.target.value)}}></Checkbox>
       </div>
-      <Button className="Salvar" title="Salvar" type="submit">Salvar</Button>
+      <Button className="" title="Salvar" type="submit" id="savedbtn">Salvar</Button>
     </form>  
   )
 }
