@@ -1,25 +1,22 @@
-.containerLogin{
+.mainLogin {
   display: flex;
   flex-direction: column;
-  margin: 0;
-}
-
-.mainLogin{
-    display: flex;
-    flex-direction: column;
 }
 
 .headerLogin {
-    background-color: #5976AA;
-    width: 100vw;
-    height: 30%;
-    border-radius: 0px 0px 30px 30px;
+  margin-top: -20%;
+  background-color: #5976AA;
+  width: 100vw;
+  height: 75vh;
+  border-radius: 0px 0px 15px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .welcome {
-    color: white;
-    padding-top: 15%;
-    font-size: 5em;
+  color: white;
+  font-size: 5em;
 }
 
 .labelLogin {
@@ -28,13 +25,14 @@
   margin-top: 5px;
 }
 
-.btnGoogle{
-    background-color: white;
-    border-radius: 20px 20px 20px 20px;
-    border-style: solid;
-    border-color: rgb(112, 110, 110);
-    width: 40vw;
-    height: 5vh;
-    font-size: 2em;
-    margin-left: 30%;
+.btnGoogle {
+
+  background: #FFFFFF;
+  border: 0.5px solid rgba(65, 65, 65, 0.8);
+  border-radius: 8px;
+  width: 50vw;
+  height: 8vh;
+  font-size: 2em;
+  margin-left: 30%;
+  margin-top: 3%;
 }
