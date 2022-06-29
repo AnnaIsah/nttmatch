@@ -7,6 +7,7 @@ function ButtonR({ className, title, onClick, type, children }) {
             type={type}
             className={className}
             onClick={onClick}
+         
             title={title}
             children={children}>
         </button>
