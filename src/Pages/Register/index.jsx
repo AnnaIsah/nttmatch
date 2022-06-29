@@ -91,34 +91,28 @@ function Register() {
       return null;
     }
 
-<<<<<<< HEAD
-=======
+  }
+    useEffect(() => {
+      const getUsers = async () => {
+        const data = await getDocs(docRef);
+        setUsers(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+      };
+      getUsers();
+    }, [docRef]);
+  
+
   useEffect(()=>{
     fetch("viacep.com.br/ws/01001000/json/",{
       headers: {
         Accept: "application/json"
       }
     }).then(res => res.json())
-    .then(res => setUser(res.data))
+    .then(res => setUsers(res.data))
   },[]);
 
-  function handleSubmit(e){
-    e.preventDefault();
->>>>>>> d74512eda3417ce944cad0b80cf1cf73d55214ce
-  }
-
-  useEffect(() => {
-    const getUsers = async () => {
-      const data = await getDocs(docRef);
-      setUsers(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
-    };
-    getUsers();
-  }, [docRef]);
-
-
+  
 
   return (
-<<<<<<< HEAD
     <>
 
       <form onSubmit={addUsers}>
@@ -129,16 +123,6 @@ function Register() {
             onChange={(e) => { setName(e.target.value) }} />
         </div>
         {/* <div>
-=======
-    <form onSubmit={handleSubmit}>
-      <h1>NTT MATCH</h1>
-      <div>
-        <label>Nome completo</label>
-        <Input type="text" placeholder="Insira o nome" name="name" value={name} max="225"
-        onChange={(e)=>{setName(console.log(e.target.value))}}/>
-      </div>
-      <div>
->>>>>>> d74512eda3417ce944cad0b80cf1cf73d55214ce
         <label>Gênero</label>
         <Select options={selectGender}
           onChange={(e) => { setGender(console.log((e.target.value))) }} />
@@ -219,4 +203,4 @@ function Register() {
     </>
   )
 };
-export default Register
+export default Register;
