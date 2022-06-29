@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+body {
+    font-family: Montserrat;
+}
+
+.headerLogin {
+    background-color: #5976AA;
+    width: 100vw;
+    height: 65vh;
+    
+}
+
+.welcome {
+    color: white;
+    padding-top: 180px;
+    font-size: 5em;
+}
+
+.labelLogin {
+  font-size: 3em;
+  margin-left: 100px;
+  margin-top: 20px;
+}
+
+.btnGoogle {
+    background-color: white;
+    border-radius: 20px 20px 20px 20px;
+    border-style: solid;
+    border-color: rgb(202, 191, 191);
+    width: 430px;
+    height: 50px;
+    font-size: 2em;
+    margin-left: 450px;
+    margin-top: 10px;
+}
