@@ -4,10 +4,9 @@
 }
 
 .headerLogin {
-  margin-top: -20%;
   background-color: #5976AA;
   width: 100vw;
-  height: 75vh;
+  height: 50%;
   border-radius: 0px 0px 15px 15px;
   display: flex;
   align-items: center;
