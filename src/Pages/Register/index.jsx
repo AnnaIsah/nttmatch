@@ -4,9 +4,9 @@ import Radio from "../../Components/radio"
 import Checkbox from "../../Components/checkbox"
 import Button from "../../Components/button"
 import {ViaCep} from "../../Service/api"
-// import { addUsers } from "../../Service/authentication.js"
+import { addUsers } from "../../Service/authentication.js"
 import { useEffect, useState } from "react"
-
+import "../Register/index.css";
 function Register() {
   
   const [user, setUser] = useState([]);
@@ -14,7 +14,7 @@ function Register() {
   const [gender, setGender] = useState("");
   const [age, setAge] = useState("");
   const [email, setEmail] = useState("");
-  const [tel, setTel] = useState("");
+  const [phone, setPhone] = useState("");
   const [cep, setCep] = useState("");
   const [music, setMusic] = useState("");
   const [sport, setSport] = useState("");
@@ -73,41 +73,56 @@ function Register() {
     }
     if(name===""||age===""||email===""||tel===""||cep===""||technology==="" &&
     music==="" && sport==="" && game==="" && animals==="" && travel===""){
-      return 
-    }
+      return console.log("preencha todos os campos")
+    } else {
+        const user = {};
+    user.name = name;
+    user.email = email;
+    user.age = age;
+    user.gender = gender;
+    user.phone = phone;
+    user.cep = cep;
+    user.interests = { technology: technology, music: music, sport: sport, game: game, animals: animals, travel: travel};
+
+    addUsers(user);
+      }
   }
 
   return (
-    <form onSubmit={handleSubmit}>
+    <div className="container">
       <h1>NTT MATCH</h1>
-      <div>
+      <form onSubmit={handleSubmit}>
+      <div className="input-box">
         <label>Nome completo</label>
         <Input type="text" placeholder="Insira o nome" name="name" value={name} max="225"
         onChange={(e)=>{setName(e.target.value)}}/>
-        <Select name={gender} options={selectGender}
-        onChange={(e) => {setGender(console.log(e.target.value))}}/>
       </div>
-      <div>
+      <div className="input-box">
+        <label>Gênero</label>
+        <Select options={selectGender} name={gender}
+        onChange={(e) => setGender(e.target.value)}/>
+      </div>
+      <div className="input-box">
         <label>Idade</label>
         <Input type="text"
           title="A idade deve seguir o padrão exigido" 
           placeholder="00" maxlength="100" name="age" value={age} 
           onChange={(e)=>{setAge(e.target.value)}}/>
       </div>
-      <div>
+      <div className="input-box">
         <label>E-mail</label>
         <Input type="email" 
           title="Siga este formato exemplo@exemplo.com" placeholder="Insira o e-mail" name="email" value="email"
           onChange={(e)=>{setEmail(e.target.value)}}/>
       </div>
-      <div>
+      <div className="input-box">
         <label>Telefone</label>
         <Input type="text" 
           title="O telefone deve seguir o padrão exigido" placeholder="(00) 00000-0000"
-          min="0" max="9" name="tel" value="tel" 
-          onChange={(e)=>{setTel(e.target.value)}}/>
+          min="0" max="9" name="phone" value="phone" 
+          onChange={(e)=>setPhone(e.target.value)}/>
       </div>
-      <div>
+      <div className="input-box">
         <label>CEP</label>
         <Input type="text"
           title="O CEP deve ter 8 caracteres" placeholder="00000-000" name={cep} value="cep"
@@ -174,8 +189,8 @@ function Register() {
         <Checkbox name={travel} value="montain" label="Montanha"
         onChange={(e) =>{setTravel(e.target.value)}}></Checkbox>
       </div>
-      <Button className="" title="Salvar" type="submit" id="savedbtn">Salvar</Button>
-    </form>  
+      <Button className="savedForm" title="Salvar" type="submit">Salvar</Button>
+    </form>
   )
 }
 export default Register
