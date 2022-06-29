@@ -1,70 +1,55 @@
-# Getting Started with Create React App
+<h1 align="left"> NTT MATCH </h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge)
 
-## Available Scripts
+## Índice
 
-In the project directory, you can run:
+* [1. Descrição do projeto](#1-resumo-do-projeto)
+* [2. Funcionalidades](#2-funcionalidades)
+* [3. Aplicação](#3-aplicação)
+* [4. Ferramentas utilizadas](#4-ferramentas-utilizadas)
+* [5. Desenvolvedoras](#5-desenvolvedoras)
+***
 
-### `npm start`
+## 1. Descrição do projeto
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Projeto em desenvolvimento no *Hackathon* do *Bootcamp* da Laboratoria, desafio proposto pela time da empresa participante NTT DATA.
+Nos foi proposto o desafio de criar uma aplicação para uso interno da empresa, nela os colaboradores realizam seu login a partir da sua conta Google, em seu primeiro acesso o usuário é redirecionados para uma página onde é realizada uma hiperpersonalização, sendo possível registrar além de seus dados e meios de contato, também seus gostos musicais, esportes, games favoritos entre outros. A partir dessa hiperpersonalização é realizado um *Match* entre os colaboradores que tem os mesmos gostos, sendo possível eles se conectarem externamente pelas redes sociais cadastradas.
+O intuito da aplicação é poder aproximar os colaboradores, já que o trabalho remoto causou um distanciamento natural, e necessário em tempos de pandemia, a partir dessa hiperpersonalização é realizado um *Match* entre os colaboradores que tem afinidades, sendo possível eles se conectarem externamente pelas redes sociais cadastradas.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<section align="center">
+  <img alt="ilustração"  src="https://i.pinimg.com/originals/3b/44/4c/3b444c462ada3fcbca1457c5f41bdadb.jpg">
+</section>  
 
-### `npm test`
+## 2. Funcionalidades
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+:heavy_check_mark: `Funcionalidade 1:` Realizar cadastro dos usuários, através da sua conta Google.
 
-### `npm run build`
+:heavy_check_mark: `Funcionalidade 2:` Ao logar pela primeira vez o usuário é redirecionado a uma página de hiperpersonaliação onde registrar seus gostos. Se não for a primeira vez a acessar a aplicação, o usuário será redirecionado para o *feed*.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+:heavy_check_mark: `Funcionalidade 3:` Ao logar pela primeira vez, após registrar suas preferências, será redirecionado para uma página que exibirá o sucesso à armazenar suas informações, e poderá ter uma prévia dos seus *Match's*.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+:heavy_check_mark: `Funcionalidade 4:` Já na sua página do *feed* o usuário poderá filtrar sua busca para se conectar com outros usuários.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+:heavy_check_mark: `Funcionalidade 5:` No resultado da sua busca, o usuário poderá ter acesso a diversos gostos e informações de outros usuário, tais como *e mail* e *whatsApp* para poderem se conectar externamente. 
 
-### `npm run eject`
+## 3. Aplicação
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 4. Ferramentas utilizadas
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+ ### 🛠 Prototyping and organizational tools:
+<div>
+  <br>
+  <img align="center"  alt="Canva" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/canva/canva-original.svg">	
+  <img align="center"  alt="Figma" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/figma/figma-original.svg"> 
+  <img align="center"  alt="trello" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/trello/trello-plain.svg">					     
+  <img align="center"  alt="VScode" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vscode/vscode-original.svg">
+  <img align="center"  alt="firebase" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/firebase/firebase-plain.svg">	
+  <img align="center"  alt="Git" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg">
+  <img align="center"  alt="nodejs" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg">
+  <img align="center"  alt="React" height="30" width="40" src= https://github.com/devicons/devicon/blob/master/icons/react/react-original.svg>
+  <img align="center"  alt="Js" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg">
+  <img align="center"  alt="HTML" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg">
+  <img align="center"  alt="CSS" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg">  
+</div>    
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
