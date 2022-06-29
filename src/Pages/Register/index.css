@@ -2,45 +2,63 @@ form {
     display: flex;
     flex-direction: column;
 }
-
-h1 {
+.container {
+    display: flex;
+    justify-content: center;
+}
+.titleRegister {
     color: #5976AA;
     font-family: 'Montserrat';
     text-align: center;
-    font-size: 25px;
+    font-size: 7rem;
     font-weight: 500;
 }
-.input-box {
+.inputBox select {
+    background: #F9F9F9;
+    border: 2px solid #F2F2F2;
+    border-radius: 5px;
+    font-size: 1.8rem;
+}
+
+.titleLabel {
+    color: #7C7C7C;
+    font-size: 1.8rem;
+}
+
+.inputBox {
     display: flex;
     flex-direction: column;
 }
 
-.input-box-tec{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-.input-box label {
-    color: #7C7C7C;
-}
-
-.input-box input {
+.inputBox input {
     background: #F9F9F9;
     border: 2px solid #F2F2F2;
     border-radius: 5px;
+    width: 100%;
+    height: 5rem;
+    font-size: 1.8rem;
 }
 
-h2{
-    color: #424242;
-    font-weight: 600;
-    font-size: 17px;
+.inputBoxTec{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: 1.8rem;
 }
 
-.salvedForm {
+.savedForm {
     background-color: #273883;
     color: #FFFFFF;
     text-align: center;
     border-style: none;
     border-radius: 10px;
+    height: 5rem;
+    margin-bottom: 2%;
+    font-size: 1.6rem;
+}
+
+.inputBoxSelect {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.6rem;
 }
