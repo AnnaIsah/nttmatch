@@ -1,4 +1,26 @@
-.InputStyle{
-    background-color: #F9F9F9;
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    color: #5976AA;
+    font-family: 'Montserrat';
+    text-align: center;
+    font-size: 25px;
+    font-weight: 500;
+}
+.input-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-box label {
+    color: #7C7C7C;
+}
+
+.input-box input {
+    background: #F9F9F9;
     border: 2px solid #F2F2F2;
+    border-radius: 5px;
 }
