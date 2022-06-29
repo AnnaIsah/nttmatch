@@ -71,7 +71,7 @@ function Register() {
     }catch(e) {
       alert("erro desconhecido")
     }
-    if(name===""||age===""||email===""||tel===""||cep===""||technology==="" &&
+    if(name===""||age===""||email===""||phone===""||cep===""||technology==="" &&
     music==="" && sport==="" && game==="" && animals==="" && travel===""){
       return console.log("preencha todos os campos")
     } else {
@@ -191,6 +191,7 @@ function Register() {
       </div>
       <Button className="savedForm" title="Salvar" type="submit">Salvar</Button>
     </form>
+    </div>
   )
 }
 export default Register
