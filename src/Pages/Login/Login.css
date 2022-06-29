@@ -1,36 +1,40 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+.containerLogin{
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
 
-body {
-    font-family: Montserrat;
+.mainLogin{
+    display: flex;
+    flex-direction: column;
 }
 
 .headerLogin {
     background-color: #5976AA;
     width: 100vw;
-    height: 65vh;
-    
+    height: 30%;
+    border-radius: 0px 0px 30px 30px;
 }
 
 .welcome {
     color: white;
-    padding-top: 180px;
+    padding-top: 15%;
     font-size: 5em;
 }
 
 .labelLogin {
-  font-size: 3em;
-  margin-left: 100px;
-  margin-top: 20px;
+  font-size: 2em;
+  margin-left: 2%;
+  margin-top: 5px;
 }
 
-.btnGoogle {
+.btnGoogle{
     background-color: white;
     border-radius: 20px 20px 20px 20px;
     border-style: solid;
-    border-color: rgb(202, 191, 191);
-    width: 430px;
-    height: 50px;
+    border-color: rgb(112, 110, 110);
+    width: 40vw;
+    height: 5vh;
     font-size: 2em;
-    margin-left: 450px;
-    margin-top: 10px;
+    margin-left: 30%;
 }

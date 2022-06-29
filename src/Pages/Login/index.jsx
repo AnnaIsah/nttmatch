@@ -1,5 +1,6 @@
 
-import { Button } from 'reactstrap';
+import "../Login/Login.css";
+import Button from "../../Components/button"
 import { useNavigate } from 'react-router';
 import { FcGoogle } from "react-icons/fc";
 import { signInGoogle } from "../../Service/authentication.js"
@@ -21,15 +22,15 @@ function Login() {
   }
 
   return (
-    <>
+    <div className="containerLogin">
       <header className='headerLogin'>
         <h1 className='welcome'>Bem-vindos</h1>
       </header>
       <main className='mainLogin'>
-        <label className='labelLogin'>Faça seu login com o Google: </label><br></br>
+        <label className='labelLogin'>Faça seu login com o Google: </label>
         <Button className="btnGoogle" onClick={logOn}> <FcGoogle />Google</Button>
       </main>
-    </>
+    </div>
   );
 
 }
