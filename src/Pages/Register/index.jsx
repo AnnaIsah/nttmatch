@@ -115,7 +115,8 @@ function Register() {
       </div>
 
       <h2>Interesses</h2>
-      <div className="input-box">
+      <label>Tecnologia</label>
+      <div className="input-box-tec">
       <Radio type="radio" value="front" name="technology" label="Front"/>
       <Radio type="radio" value="back" name="technology" label="Back"/>
       <Radio type="radio" value="full" name="technology" label="Full Stack"/>
@@ -153,7 +154,7 @@ function Register() {
         <Checkbox name="travel" value="beach" label="Praia"></Checkbox>
         <Checkbox name="travel" value="montain" label="Montanha"></Checkbox>
       </div>
-      <Button className="Salvar" title="Salvar" type="submit">Salvar</Button>
+      <Button className="salvedForm" title="Salvar" type="submit">Salvar</Button>
     </form>
     </div>  
   )
