@@ -13,16 +13,15 @@ function Login() {
     signInGoogle()
       .then((data) => {
         setToken(data.token)
-        navigate("/feed");
-        console.log("entrou")
+        navigate("/register");
       })
       .catch((error) => {
-        console.log(error)
+        return(error)
       })
   }
 
   return (
-    <div className="containerLogin">
+    <>
       <header className='headerLogin'>
         <h1 className='welcome'>Bem-vindos</h1>
       </header>
@@ -31,7 +30,7 @@ function Login() {
         <Button className="btnGoogle" onClick={logOn}> <FcGoogle />Google</Button>
         <Button className="btnWhats" onClick={logOn}> <FcGoogle />Google</Button>
       </main>
-    </div>
+    </>
   );
 
 }

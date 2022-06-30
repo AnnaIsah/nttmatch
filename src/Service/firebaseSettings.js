@@ -10,4 +10,4 @@ const firebaseSettings = {
 };
 
 
- export const app = initializeApp(firebaseSettings);
+export const app = initializeApp(firebaseSettings); 
