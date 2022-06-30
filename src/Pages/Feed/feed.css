@@ -1,0 +1,52 @@
+.bodyFeed {
+  background-color: #f2f2f2;
+}
+
+.mainFeed {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  width: 100%;
+  height: 82%;
+}
+.headerFeed {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  /* flex-wrap: nowrap; */
+  flex-direction: column;
+}
+.searchBar {
+  border-radius: 10px;
+  width: 39%;
+  height: 60%;
+}
+.btns {
+  display: flex;
+  justify-content: center;
+}
+
+.btnMusic,
+.btnAnimals,
+.btnsports,
+.btnGames {
+  color: #ffff;
+  width: 80px;
+  height: 80px;
+}
+
+.btnMusic {
+  background-color: #0d0d0d;
+}
+
+.btnAnimals {
+  background-color: #2b448c;
+}
+
+.btnGames {
+  background-color: #233059;
+}
+
+.btnsports {
+  background-color: #587aa6;
+}
