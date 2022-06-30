@@ -89,7 +89,13 @@ function Register() {
 
       addUsers(user);
     }
-
+  }
+    const actionRegister = async (e) => {
+      e.preventDefault();
+      handleSubmit()
+      .then((data) => {
+        navigate("/previous");
+          })
   }
 
   return (
@@ -194,9 +200,10 @@ function Register() {
         <Checkbox name={travel} value="montain" label="Montanha"
         onChange={(e) =>{setTravel(e.target.value)}}></Checkbox>
       </div>
-        <Button className="savedForm" title="Salvar" type="submit">Salvar</Button>
+        <Button className="savedForm" title="Salvar" type="submit" onClick={actionRegister}>Salvar</Button>
       </form>
     </div>
   )
 }
+
 export default Register;
