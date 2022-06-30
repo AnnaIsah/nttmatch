@@ -28,6 +28,7 @@ function Login() {
       <main className='mainLogin'>
         <label className='labelLogin'>Faça seu login com o Google: </label>
         <Button className="btnGoogle" onClick={logOn}> <FcGoogle />Google</Button>
+        <Button className="btnWhats" onClick={logOn}> <FcGoogle />Google</Button>
       </main>
     </>
   );
