@@ -1,13 +1,12 @@
 import { initializeApp } from "firebase/app";
 
 const firebaseSettings = {
-  apiKey: "AIzaSyAp4cTDXrIhg0B0-AWzJJuLuyEAmfCxI50",
-  authDomain: "talentfestnttdata.firebaseapp.com",
-  projectId: "talentfestnttdata",
-  storageBucket: "talentfestnttdata.appspot.com",
-  messagingSenderId: "229700664372",
-  appId: "1:229700664372:web:d013ff421ef7c53ff6de61"
+  apiKey: "AIzaSyBWz9Z7p1q5B2g5uUzib8zGHpZRiLIbgP4",
+  authDomain: "talentfest-7f561.firebaseapp.com",
+  projectId: "talentfest-7f561",
+  storageBucket: "talentfest-7f561.appspot.com",
+  messagingSenderId: "248851287173",
+  appId: "1:248851287173:web:efe5cf80045062518d2dec"
 };
-
 
  export const app = initializeApp(firebaseSettings);

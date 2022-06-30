@@ -30,4 +30,3 @@ export async function addUsers(user) {
   const userObject = addDoc(collection(db, 'user'), user);
   return userObject;
 }
-
