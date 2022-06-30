@@ -13,11 +13,10 @@ function Login() {
     signInGoogle()
       .then((data) => {
         setToken(data.token)
-        navigate("/feed");
-        console.log("entrou")
+        navigate("/register");
       })
       .catch((error) => {
-        console.log(error)
+        return(error)
       })
   }
 
