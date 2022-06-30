@@ -1,0 +1,13 @@
+
+.containerPrevious {
+    display: flex;
+flex-direction: column;
+}
+
+.titlePrevious {
+    color: #3C3C3C;
+}
+
+b, strong {
+    color: #5976AA;
+}

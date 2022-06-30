@@ -1,29 +1,46 @@
 .bodyFeed {
   background-color: #f2f2f2;
+  height: 100%;
+}
+
+.headerFeed {
+  display: flex;
+  height: 100%;
+  width: 90%;
+  align-items: center;
+  justify-content: left;
+  padding: 5%;
 }
 
 .mainFeed {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: nowrap; 
   flex-direction: column;
   width: 100%;
-  height: 82%;
+  height: 100%;
 }
-.headerFeed {
+
+.sectionTittle, .sectionCategory, .sectionResult{
+  margin: 5%;
+}
+
+.sectionSearchBar{
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  /* flex-wrap: nowrap; */
+  align-items: center;
   flex-direction: column;
 }
+
 .searchBar {
-  border-radius: 10px;
-  width: 39%;
-  height: 60%;
+  border-radius: 15px;
+  border: solid 1px grey;
+  width: 90%;
+  height: 10vh;
+  text-align: center;
 }
 .btns {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
+  width: 100%;
 }
 
 .btnMusic,
@@ -31,8 +48,10 @@
 .btnsports,
 .btnGames {
   color: #ffff;
-  width: 80px;
-  height: 80px;
+  width: 23vw;
+  height: 20vh;
+  border-radius: 10px;
+  border: solid 1px transparent;
 }
 
 .btnMusic {

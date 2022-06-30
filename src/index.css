@@ -3,13 +3,13 @@
     padding: 0;
     box-sizing: border-box;
 }
-body {
+/* body {
     display: flex;
     align-items: center;
     justify-content: center;
     font-family: 'Montserrat';
     font-size: 1.8rem;
-}
+} */
 
 #root {
     height: 100%;
