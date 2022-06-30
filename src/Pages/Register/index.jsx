@@ -6,9 +6,11 @@ import Button from "../../Components/button"
 import {ViaCep} from "../../Service/api"
 import { addUsers } from "../../Service/authentication.js"
 import { useEffect, useState } from "react"
+import { useNavigate } from 'react-router';
 import "../Register/index.css";
 function Register() {
-  
+
+  const navigate = useNavigate()
   const [user, setUser] = useState([]);
   const [name, setName] = useState("");
   const [gender, setGender] = useState("");
@@ -67,13 +69,16 @@ function Register() {
     try{
       const contentApiCep = await ViaCep(cep);
       const contentApiJson = await contentApiCep.json();
-      console.log(contentApiJson);
+
+      // if(contentApiJson.status !== 200){
+      //   return alert("erro de digitação do cep")
+      // }
     }catch(e) {
       alert("erro desconhecido")
     }
-    if(name===""||age===""||email===""||phone===""||cep===""||technology==="" &&
-    music==="" && sport==="" && game==="" && animals==="" && travel===""){
-      return console.log("preencha todos os campos")
+      if(name===""||age===""||email===""||phone===""||cep===""||technology==="" &&
+      music==="" && sport==="" && game==="" && animals==="" && travel===""){
+      return alert("preencha todos os campos")
     } else {
         const user = {};
     user.name = name;
@@ -83,8 +88,8 @@ function Register() {
     user.phone = phone;
     user.cep = cep;
     user.interests = { technology: technology, music: music, sport: sport, game: game, animals: animals, travel: travel};
-
     addUsers(user);
+    navigate("/feed")
       }
   }
 
