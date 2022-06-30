@@ -5,7 +5,7 @@ import Checkbox from "../../Components/checkbox"
 import Button from "../../Components/button"
 import { ViaCep } from "../../Service/api"
 import { addUsers } from "../../Service/authentication.js"
-import { useEffect, useState } from "react"
+import {  useState } from "react"
 import { useNavigate } from 'react-router';
 import "../Register/index.css";
 

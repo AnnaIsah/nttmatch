@@ -3,18 +3,7 @@ import * as firebase from "firebase/app";
 import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import { useState } from "react";
 import firebaseSettings from "./firebaseSettings.js";
-import {
-  getFirestore,
-  collection,
-  addDoc,
-  getDocs,
-  orderBy,
-  query,
-  deleteDoc,
-  doc,
-  updateDoc,
-  arrayUnion,
-} from "firebase/firestore";
+import { getFirestore, collection, addDoc, getDocs } from "firebase/firestore";
 
 const provider = new GoogleAuthProvider();
 export const authentication = getAuth();
@@ -28,15 +17,15 @@ export async function signInGoogle() {
 export const db = getFirestore();
 
 export async function addUsers(user) {
-  const userObject = addDoc(collection(db, 'user'), user);
+  const userObject = addDoc(collection(db, "user"), user);
   return userObject;
 }
 
 const GetUsers = async () => {
   // const [allUser, setAllUser] = useState([]);
-  const allUsers = await getDocs(collection(db, 'user'));
-  allUsers.forEach((doc)=>{
-    console.log(doc.id,"=>",doc.data())
+  const allUsers = await getDocs(collection(db, "user"));
+  allUsers.forEach((doc) => {
+    console.log(doc.id, "=>", doc.data());
   });
-}
-export default GetUsers
+};
+export default GetUsers;
