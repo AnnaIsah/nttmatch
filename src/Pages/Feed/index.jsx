@@ -1,12 +1,11 @@
 import Input from "../../Components/input";
-// import Card from "../../Components/card"
-import Button from "../../Components/button";
-import "./feed.css";
+import Button from "../../Components/button"
+import "./feed.css"
 import GetUsers from "../../Service/authentication";
+import Card from "../../Components/card";
 import { FaSignInAlt } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
-
 
 function Feed() {
 
@@ -32,6 +31,7 @@ function Feed() {
   //     return info.id === user.id;
   //   })
   // };
+
 
 
   return (
@@ -61,8 +61,11 @@ function Feed() {
         <section className="sectionResult">
           <h3>Resultado</h3>
         </section>
+
       </main>
     </body>
   )
 }
+
 export default Feed
+
