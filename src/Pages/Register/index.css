@@ -5,6 +5,7 @@ form {
 .container {
     display: flex;
     justify-content: center;
+    flex-direction: column;
 }
 .titleRegister {
     color: #5976AA;
