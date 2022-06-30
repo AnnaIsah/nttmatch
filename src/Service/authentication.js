@@ -27,7 +27,6 @@ export async function signInGoogle() {
 export const db = getFirestore();
 
 export async function addUsers(name, userEmail, phone, age, gender, CEP) {
-  console.log(addUsers)
   try {
     const docRef = await addDoc(collection(db, "users"), {
       name,
