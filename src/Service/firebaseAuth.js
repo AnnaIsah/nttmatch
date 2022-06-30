@@ -1,5 +1,6 @@
 export {
   getAuth,
+  db,
   GoogleAuthProvider,
   signInWithPopup,
   setPersistence,
