@@ -1,27 +1,32 @@
 import Input from "../../Components/input";
 import Button from "../../Components/button"
 import "./feed.css"
-import GetUsers from "../../Service/authentication";
 import Card from "../../Components/card";
 import { FaSignInAlt } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { getDocs, getFirestore, collection } from "firebase/firestore";
 
 function Feed() {
 
   const navigate = useNavigate(); 
 
-  const user = GetUsers();
-  console.log(user)
- 
-
   function handleLogout() {
     localStorage.removeItem("token");
     navigate("/login");
   }
+  const db = getFirestore();
+  const [users, setUser] = useState([]);
 
+  useEffect(() => {
+    const getUsers = async () => {
+    const allUsers = collection(db, "user")
+      const data = await getDocs(allUsers)
+      setUser(data.docs.map((doc) => ({...doc.data(), id: doc.id })));
+    }
+    getUsers();
+  }, []);
 
-  // const [userData, setUserData] = useState([]);
   // const [used, setUsed] = useState([])
 
   // function infoUser(userData) {
@@ -60,6 +65,17 @@ function Feed() {
         </section>
         <section className="sectionResult">
           <h3>Resultado</h3>
+          <div>
+            <ul>
+              {users.map(user => {
+                return (
+                  <div>
+                    <li>{user.name}</li>
+                  </div>
+                )
+              })}
+            </ul>
+          </div>
         </section>
 
       </main>
